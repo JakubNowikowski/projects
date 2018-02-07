@@ -1,0 +1,76 @@
+﻿<Application x:Class="WeekPlanner2.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:WeekPlanner2"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+
+        <!--Days-->
+
+        <ControlTemplate x:Key="Days">
+            <Grid>
+                <Border Background="BlanchedAlmond" 
+                x:Name="Bd" BorderBrush="BlanchedAlmond"
+                BorderThickness="1" CornerRadius="8"
+                Margin="10,0,10,0" Padding="16">
+                </Border>
+                <ContentControl HorizontalAlignment="Center" 
+                                VerticalAlignment="Center"
+                                FontWeight="Bold" FontSize="20"
+                                Content="{TemplateBinding Property=ContentControl.Content}"/>
+            </Grid>
+        </ControlTemplate>
+
+        <!--Main buttons-->
+
+        <ControlTemplate x:Key="MainButton">
+            <Grid>
+                <Border Background="CornflowerBlue" 
+                x:Name="Bd" BorderBrush="CornflowerBlue"
+                BorderThickness="1" CornerRadius="8"
+                Margin="50,10,50,0" Padding="20">
+                </Border>
+                <ContentControl HorizontalAlignment="Center" 
+                                VerticalAlignment="Center"
+                                FontWeight="Bold"
+                                Content="{TemplateBinding Property=ContentControl.Content}"/>
+
+            </Grid>
+            <ControlTemplate.Triggers>
+                <Trigger Property="Button.IsPressed" Value="True">
+                    <Setter Property="Grid.RenderTransform">
+                        <Setter.Value>
+                            <ScaleTransform ScaleX="0.95" ScaleY="0.95"/>
+                        </Setter.Value>
+                    </Setter>
+                </Trigger>
+            </ControlTemplate.Triggers>
+        </ControlTemplate>
+
+        <!--Clear buttons-->
+
+        <ControlTemplate x:Key="ClearButton">
+            <Grid>
+                <Border Background="CadetBlue" 
+                x:Name="Bd" BorderBrush="CadetBlue"
+                BorderThickness="1" CornerRadius="8"
+                Margin="10,5,10,0" Padding="10">
+                </Border>
+                <ContentControl HorizontalAlignment="Center" 
+                                VerticalAlignment="Center"
+                                Content="{TemplateBinding Property=ContentControl.Content}"/>
+
+            </Grid>
+            <ControlTemplate.Triggers>
+                <Trigger Property="Button.IsPressed" Value="True">
+                    <Setter Property="Grid.RenderTransform">
+                        <Setter.Value>
+                            <ScaleTransform ScaleX="0.95" ScaleY="0.95"/>
+                        </Setter.Value>
+                    </Setter>
+                </Trigger>
+            </ControlTemplate.Triggers>
+        </ControlTemplate>
+
+    </Application.Resources>
+</Application>

@@ -1,0 +1,75 @@
+﻿<Window x:Class="WeekPlanner2.AddWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WeekPlanner2"
+        mc:Ignorable="d"
+        Title="AddWindow" Height="500" Width="800" WindowStartupLocation="CenterScreen" Background="LightGray">
+
+    <StackPanel Margin="20">
+
+        <TextBlock Margin="0 10" Text="Choose day:" FontWeight="Bold" />
+
+        <!--Radio Buttons with days-->
+
+        <Grid x:Name="gridDays">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <RadioButton Grid.Column="0" x:Name="radioButtonMon" Content="Monday"/>
+            <RadioButton Grid.Column="1" x:Name="radioButtonTue" Content="Tuesday"/>
+            <RadioButton Grid.Column="2" x:Name="radioButtonWed" Content="Wednesday"/>
+            <RadioButton Grid.Column="3" x:Name="radioButtonThu" Content="Thursday"/>
+            <RadioButton Grid.Column="4" x:Name="radioButtonFri" Content="Friday"/>
+            <RadioButton Grid.Column="5" x:Name="radioButtonSat" Content="Saturday"/>
+            <RadioButton Grid.Column="6" x:Name="radioButtonSun" Content="Sunday"/>
+
+        </Grid>
+
+        <!--Activity-->
+
+        <TextBlock Margin="0 10" Text="Insert activity:" FontWeight="Bold" />
+
+        <TextBox x:Name="textBoxActivity" TextWrapping="Wrap" Padding="10">
+
+        </TextBox>
+
+        <!--Time-->
+
+        <TextBlock Margin="0 10" Text="Set time:" FontWeight="Bold" />
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="25*"/>
+            </Grid.ColumnDefinitions>
+
+
+            <TextBox x:Name="textBoxHours" Width="20" Margin="0 0 0 0" Grid.Column="0" PreviewTextInput="textBoxHours_PreviewTextInput" />
+            <TextBlock Margin="10 0" Text=":" FontWeight="Bold" Grid.Column="1" />
+            <TextBox x:Name="textBoxMinutes" Width="20" Margin="0 0 0 0" Grid.Column="2" PreviewTextInput="textBoxMinutes_PreviewTextInput"  />
+
+        </Grid>
+
+        <!--Importance scale-->
+
+        <TextBlock Margin="0 10" Text="Choose importance scale:" FontWeight="Bold" />
+
+        <RadioButton x:Name="radioButtonVeryImportant" Content="Very important" Margin="0 0 0 10"/>
+        <RadioButton x:Name="radioButtonImportant" Content="Important" Margin="0 0 0 10"/>
+        <RadioButton x:Name="radioButtonSlightImportant" Content="Slightly important" Margin="0 0 0 10"/>
+
+        <Button Template="{StaticResource MainButton}" x:Name="btn_Add" Content="Add" Click="btn_Add_Click"/>
+
+    </StackPanel>
+</Window>

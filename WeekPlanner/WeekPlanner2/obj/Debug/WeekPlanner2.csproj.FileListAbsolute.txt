@@ -1,0 +1,17 @@
+g:\documents\visual studio 2017\Projects\WeekPlanner2\WeekPlanner2\bin\Debug\WeekPlanner2.exe.config
+g:\documents\visual studio 2017\Projects\WeekPlanner2\WeekPlanner2\bin\Debug\WeekPlanner2.exe
+g:\documents\visual studio 2017\Projects\WeekPlanner2\WeekPlanner2\bin\Debug\WeekPlanner2.pdb
+g:\documents\visual studio 2017\Projects\WeekPlanner2\WeekPlanner2\obj\Debug\WeekPlanner2.csprojResolveAssemblyReference.cache
+g:\documents\visual studio 2017\Projects\WeekPlanner2\WeekPlanner2\obj\Debug\MainWindow.g.cs
+g:\documents\visual studio 2017\Projects\WeekPlanner2\WeekPlanner2\obj\Debug\App.g.cs
+g:\documents\visual studio 2017\Projects\WeekPlanner2\WeekPlanner2\obj\Debug\WeekPlanner2_MarkupCompile.cache
+g:\documents\visual studio 2017\Projects\WeekPlanner2\WeekPlanner2\obj\Debug\WeekPlanner2_MarkupCompile.lref
+g:\documents\visual studio 2017\Projects\WeekPlanner2\WeekPlanner2\obj\Debug\MainWindow.baml
+g:\documents\visual studio 2017\Projects\WeekPlanner2\WeekPlanner2\obj\Debug\WeekPlanner2.g.resources
+g:\documents\visual studio 2017\Projects\WeekPlanner2\WeekPlanner2\obj\Debug\WeekPlanner2.Properties.Resources.resources
+g:\documents\visual studio 2017\Projects\WeekPlanner2\WeekPlanner2\obj\Debug\WeekPlanner2.csproj.GenerateResource.Cache
+g:\documents\visual studio 2017\Projects\WeekPlanner2\WeekPlanner2\obj\Debug\WeekPlanner2.exe
+g:\documents\visual studio 2017\Projects\WeekPlanner2\WeekPlanner2\obj\Debug\WeekPlanner2.pdb
+g:\documents\visual studio 2017\Projects\WeekPlanner2\WeekPlanner2\obj\Debug\AddWindow.g.cs
+g:\documents\visual studio 2017\Projects\WeekPlanner2\WeekPlanner2\obj\Debug\AddWindow.baml
+G:\Documents\Visual Studio 2017\Projects\WeekPlanner2\WeekPlanner2\obj\Debug\App.baml

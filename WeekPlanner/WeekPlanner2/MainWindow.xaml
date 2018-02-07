@@ -1,0 +1,109 @@
+﻿<Window x:Class="WeekPlanner2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WeekPlanner2"
+        mc:Ignorable="d"
+        Title="WeekPlanner" Height="350" Width="525" WindowState="Maximized">
+
+    <Border Padding="10">
+
+        <ScrollViewer Name="ScrollViewer1" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" CanContentScroll="True">
+          
+            <StackPanel x:Name="stackPanelMain">
+
+                <!--Days-->
+
+                <Grid x:Name="gridDaysTextBlocks">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Button Template="{StaticResource Days}" Grid.Column="0" Content="Monday"/>
+                    <Button Template="{StaticResource Days}" Grid.Column="1" Content="Tueday"/>
+                    <Button Template="{StaticResource Days}" Grid.Column="2" Content="Wednesday"/>
+                    <Button Template="{StaticResource Days}" Grid.Column="3" Content="Thursday"/>
+                    <Button Template="{StaticResource Days}" Grid.Column="4" Content="Friday"/>
+                    <Button Template="{StaticResource Days}" Grid.Column="5" Content="Saturday"/>
+                    <Button Template="{StaticResource Days}" Grid.Column="6" Content="Sunday"/>
+
+                </Grid>
+
+                <StackPanel x:Name="stackPanelDays" VerticalAlignment="Stretch" Height="Auto">
+                    <Grid x:Name="gridDaysStackPanels" Margin="0,5,0,0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Border Grid.Column="1" BorderBrush="Black" BorderThickness="1,0,0,0" />
+                        <Border Grid.Column="2" BorderBrush="Black" BorderThickness="1,0,0,0" />
+                        <Border Grid.Column="3" BorderBrush="Black" BorderThickness="1,0,0,0" />
+                        <Border Grid.Column="4" BorderBrush="Black" BorderThickness="1,0,0,0" />
+                        <Border Grid.Column="5" BorderBrush="Black" BorderThickness="1,0,0,0" />
+                        <Border Grid.Column="6" BorderBrush="Black" BorderThickness="1,0,0,0" />
+
+                        <StackPanel x:Name="stackPanelMon" Grid.Column="0"/>
+                        <StackPanel x:Name="stackPanelTue" Grid.Column="1"/>
+                        <StackPanel x:Name="stackPanelWed" Grid.Column="2"/>
+                        <StackPanel x:Name="stackPanelThu" Grid.Column="3"/>
+                        <StackPanel x:Name="stackPanelFri" Grid.Column="4"/>
+                        <StackPanel x:Name="stackPanelSat" Grid.Column="5"/>
+                        <StackPanel x:Name="stackPanelSun" Grid.Column="6"/>
+                    </Grid>
+                </StackPanel>
+
+                <!--Clear buttons-->
+
+                <Grid x:Name="gridClearButtons">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Button Template="{StaticResource ClearButton}" Grid.Column="0" x:Name="btnClearMon" Content="Clear" Click="btnClearMon_Click"/>
+                    <Button Template="{StaticResource ClearButton}" Grid.Column="1" x:Name="btnClearTue" Content="Clear" Click="btnClearTue_Click"/>
+                    <Button Template="{StaticResource ClearButton}" Grid.Column="2" x:Name="btnClearWed" Content="Clear" Click="btnClearWed_Click"/>
+                    <Button Template="{StaticResource ClearButton}" Grid.Column="3" x:Name="btnClearThu" Content="Clear" Click="btnClearThu_Click"/>
+                    <Button Template="{StaticResource ClearButton}" Grid.Column="4" x:Name="btnClearFri" Content="Clear" Click="btnClearFri_Click"/>
+                    <Button Template="{StaticResource ClearButton}" Grid.Column="5" x:Name="btnClearSat" Content="Clear" Click="btnClearSat_Click"/>
+                    <Button Template="{StaticResource ClearButton}" Grid.Column="6" x:Name="btnClearSun" Content="Clear" Click="btnClearSun_Click"/>
+
+                </Grid>
+
+                <!--Main buttons-->
+
+                <Grid x:Name="gridMainButtons">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Button Template="{StaticResource MainButton}" Grid.Column="0" Content="Add activity" x:Name="btnAddMon" Click="btnAddMon_Click"/>
+                    <Button Template="{StaticResource MainButton}" Grid.Column="1" Content="Save" x:Name="btnSave" Click="btnSave_Click"/>
+                    <Button Template="{StaticResource MainButton}" Grid.Column="2" Content="Load" x:Name="btnLoad" Click="btnLoad_Click"/>
+                    <Button Template="{StaticResource MainButton}" Grid.Column="3" Content="Clear all" x:Name="btnClearAll" Click="btnClearAll_Click"/>
+                </Grid>
+            </StackPanel>
+        </ScrollViewer>
+    </Border>
+</Window>

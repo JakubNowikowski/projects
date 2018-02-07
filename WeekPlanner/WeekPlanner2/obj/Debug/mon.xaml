@@ -1,0 +1,85 @@
+<StackPanel
+  Name="stackPanelMon"
+  Grid.Column="0" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+  <Border
+    CornerRadius="4,4,4,4"
+    Background="#FF5F9EA0"
+    Margin="10,3,10,0">
+    <TextBlock
+      Text="wqwwqwqwqqwqwqwqwqwqw : 33"
+      FontWeight="Bold"
+      FontSize="14"
+      Background="#FF5F9EA0"
+      TextAlignment="Center"
+      TextWrapping="Wrap"
+      Margin="4,4,4,4" />
+  </Border>
+  <Border
+    CornerRadius="8,8,8,8"
+    Background="#FFFF0000"
+    Margin="10,0,10,10">
+    <CheckBox
+      Margin="10,0,10,0">
+      <TextBlock
+        Text="wqwq"
+        FontSize="14"
+        TextWrapping="Wrap"
+        Width="80"
+        Margin="12,12,12,12" />
+    </CheckBox>
+  </Border>
+  <Border
+    CornerRadius="4,4,4,4"
+    Background="#FF5F9EA0"
+    Margin="10,3,10,0">
+    <TextBlock
+      Text="wqwwqwqwqqwqwqwqwqwqw : 33"
+      FontWeight="Bold"
+      FontSize="14"
+      Background="#FF5F9EA0"
+      TextAlignment="Center"
+      TextWrapping="Wrap"
+      Margin="4,4,4,4" />
+  </Border>
+  <Border
+    CornerRadius="8,8,8,8"
+    Background="#FFFF0000"
+    Margin="10,0,10,10">
+    <CheckBox
+      Margin="10,0,10,0">
+      <TextBlock
+        Text="wqwq"
+        FontSize="14"
+        TextWrapping="Wrap"
+        Width="80"
+        Margin="12,12,12,12" />
+    </CheckBox>
+  </Border>
+  <Border
+    CornerRadius="4,4,4,4"
+    Background="#FF5F9EA0"
+    Margin="10,3,10,0">
+    <TextBlock
+      Text="wqwwqwqwqqwqwqwqwqwqw : 33"
+      FontWeight="Bold"
+      FontSize="14"
+      Background="#FF5F9EA0"
+      TextAlignment="Center"
+      TextWrapping="Wrap"
+      Margin="4,4,4,4" />
+  </Border>
+  <Border
+    CornerRadius="8,8,8,8"
+    Background="#FFFF0000"
+    Margin="10,0,10,10">
+    <CheckBox
+      Margin="10,0,10,0">
+      <TextBlock
+        Text="wqwq"
+        FontSize="14"
+        TextWrapping="Wrap"
+        Width="80"
+        Margin="12,12,12,12" />
+    </CheckBox>
+  </Border>
+</StackPanel>

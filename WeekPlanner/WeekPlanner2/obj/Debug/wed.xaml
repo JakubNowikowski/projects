@@ -1,0 +1,3 @@
+<StackPanel
+  Name="stackPanelWed"
+  Grid.Column="2" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" />

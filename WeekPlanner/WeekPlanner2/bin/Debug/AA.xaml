@@ -1,0 +1,13 @@
+<StackPanel
+  Name="stackPanelMon"
+  Grid.Column="0" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+  <StackPanel
+    Background="#FF000000">
+    <CheckBox
+      Foreground="#FFCD5C5C"
+      Margin="10,0,0,0">
+      <TextBox
+        TextWrapping="Wrap">PP</TextBox>
+    </CheckBox>
+  </StackPanel>
+</StackPanel>
