@@ -1,0 +1,896 @@
+namespace WindowsFormsApplication2
+{
+    partial class Form1
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            this.dataGridView = new System.Windows.Forms.DataGridView();
+            this.idColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MODULE_SN = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TESTER = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PWR = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PWRDEV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.VOC = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.VOCDEV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ISC = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ISCDEV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FF = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FFDEV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.E = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.EDEV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DATE_TIME = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DESCRIPTION = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TEMP = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TEMPDEV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.INUSE = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.inuseCombobox = new System.Windows.Forms.ComboBox();
+            this.editCheckBox = new System.Windows.Forms.CheckBox();
+            this.editGroupBox = new System.Windows.Forms.GroupBox();
+            this.idGroupBox = new System.Windows.Forms.GroupBox();
+            this.idTextbox = new System.Windows.Forms.TextBox();
+            this.moduleSearchTextbox = new System.Windows.Forms.TextBox();
+            this.ffGroupBox = new System.Windows.Forms.GroupBox();
+            this.ffTextbox = new System.Windows.Forms.TextBox();
+            this.ffdevTextbox = new System.Windows.Forms.TextBox();
+            this.testerTextbox = new System.Windows.Forms.TextBox();
+            this.eTextbox = new System.Windows.Forms.TextBox();
+            this.edevTextbox = new System.Windows.Forms.TextBox();
+            this.pwrTextbox = new System.Windows.Forms.TextBox();
+            this.pwrdevTextbox = new System.Windows.Forms.TextBox();
+            this.date_timeGroupBox = new System.Windows.Forms.GroupBox();
+            this.TimePicker = new System.Windows.Forms.DateTimePicker();
+            this.DateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.descriptionTextbox = new System.Windows.Forms.TextBox();
+            this.vocTextbox = new System.Windows.Forms.TextBox();
+            this.tempTextbox = new System.Windows.Forms.TextBox();
+            this.vocdevTextbox = new System.Windows.Forms.TextBox();
+            this.iscTextbox = new System.Windows.Forms.TextBox();
+            this.tempdevTextbox = new System.Windows.Forms.TextBox();
+            this.iscdevTextbox = new System.Windows.Forms.TextBox();
+            this.module_snTextbox = new System.Windows.Forms.TextBox();
+            this.inuseTextbox = new System.Windows.Forms.TextBox();
+            this.inuseGroupBox = new System.Windows.Forms.GroupBox();
+            this.iscdevGroupBox = new System.Windows.Forms.GroupBox();
+            this.tempdevGroupBox = new System.Windows.Forms.GroupBox();
+            this.iscGroupBox = new System.Windows.Forms.GroupBox();
+            this.edevGroupBox = new System.Windows.Forms.GroupBox();
+            this.pwrGroupBox = new System.Windows.Forms.GroupBox();
+            this.descriptionGroupBox = new System.Windows.Forms.GroupBox();
+            this.vocGroupBox = new System.Windows.Forms.GroupBox();
+            this.ffdevGroupBox = new System.Windows.Forms.GroupBox();
+            this.module_snGroupBox = new System.Windows.Forms.GroupBox();
+            this.tempGroupBox = new System.Windows.Forms.GroupBox();
+            this.vocdevGroupBox = new System.Windows.Forms.GroupBox();
+            this.eGroupBox = new System.Windows.Forms.GroupBox();
+            this.testerGroupBox = new System.Windows.Forms.GroupBox();
+            this.pwrdevGroupBox = new System.Windows.Forms.GroupBox();
+            this.addCheckBox = new System.Windows.Forms.CheckBox();
+            this.addGroupBox = new System.Windows.Forms.GroupBox();
+            this.clearButton = new System.Windows.Forms.Button();
+            this.deleteRowButton = new System.Windows.Forms.Button();
+            this.addRowButton = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.searchModuleButton = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
+            this.editGroupBox.SuspendLayout();
+            this.idGroupBox.SuspendLayout();
+            this.ffGroupBox.SuspendLayout();
+            this.date_timeGroupBox.SuspendLayout();
+            this.inuseGroupBox.SuspendLayout();
+            this.iscdevGroupBox.SuspendLayout();
+            this.tempdevGroupBox.SuspendLayout();
+            this.iscGroupBox.SuspendLayout();
+            this.edevGroupBox.SuspendLayout();
+            this.pwrGroupBox.SuspendLayout();
+            this.descriptionGroupBox.SuspendLayout();
+            this.vocGroupBox.SuspendLayout();
+            this.ffdevGroupBox.SuspendLayout();
+            this.module_snGroupBox.SuspendLayout();
+            this.tempGroupBox.SuspendLayout();
+            this.vocdevGroupBox.SuspendLayout();
+            this.eGroupBox.SuspendLayout();
+            this.testerGroupBox.SuspendLayout();
+            this.pwrdevGroupBox.SuspendLayout();
+            this.addGroupBox.SuspendLayout();
+            this.SuspendLayout();
+            // 
+            // dataGridView
+            // 
+            this.dataGridView.AllowUserToAddRows = false;
+            this.dataGridView.AllowUserToDeleteRows = false;
+            this.dataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idColumn,
+            this.MODULE_SN,
+            this.TESTER,
+            this.PWR,
+            this.PWRDEV,
+            this.VOC,
+            this.VOCDEV,
+            this.ISC,
+            this.ISCDEV,
+            this.FF,
+            this.FFDEV,
+            this.E,
+            this.EDEV,
+            this.DATE_TIME,
+            this.DESCRIPTION,
+            this.TEMP,
+            this.TEMPDEV,
+            this.INUSE});
+            this.dataGridView.Location = new System.Drawing.Point(100, 60);
+            this.dataGridView.MultiSelect = false;
+            this.dataGridView.Name = "dataGridView";
+            this.dataGridView.ReadOnly = true;
+            this.dataGridView.Size = new System.Drawing.Size(1488, 188);
+            this.dataGridView.TabIndex = 2;
+            this.dataGridView.CellBeginEdit += new System.Windows.Forms.DataGridViewCellCancelEventHandler(this.dataGridView_CellBeginEdit);
+            this.dataGridView.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_CellDoubleClick);
+            this.dataGridView.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_CellValueChanged);
+            this.dataGridView.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.dataGridView_KeyPress);
+            // 
+            // idColumn
+            // 
+            this.idColumn.HeaderText = "ID";
+            this.idColumn.Name = "idColumn";
+            this.idColumn.ReadOnly = true;
+            this.idColumn.Width = 43;
+            // 
+            // MODULE_SN
+            // 
+            this.MODULE_SN.HeaderText = "MODULE_SN";
+            this.MODULE_SN.Name = "MODULE_SN";
+            this.MODULE_SN.ReadOnly = true;
+            this.MODULE_SN.Width = 99;
+            // 
+            // TESTER
+            // 
+            this.TESTER.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCellsExceptHeader;
+            this.TESTER.HeaderText = "TESTER";
+            this.TESTER.Name = "TESTER";
+            this.TESTER.ReadOnly = true;
+            this.TESTER.Width = 5;
+            // 
+            // PWR
+            // 
+            this.PWR.HeaderText = "PWR";
+            this.PWR.Name = "PWR";
+            this.PWR.ReadOnly = true;
+            this.PWR.Width = 58;
+            // 
+            // PWRDEV
+            // 
+            this.PWRDEV.HeaderText = "PWRDEV";
+            this.PWRDEV.Name = "PWRDEV";
+            this.PWRDEV.ReadOnly = true;
+            this.PWRDEV.Width = 80;
+            // 
+            // VOC
+            // 
+            this.VOC.HeaderText = "VOC";
+            this.VOC.Name = "VOC";
+            this.VOC.ReadOnly = true;
+            this.VOC.Width = 54;
+            // 
+            // VOCDEV
+            // 
+            this.VOCDEV.HeaderText = "VOCDEV";
+            this.VOCDEV.Name = "VOCDEV";
+            this.VOCDEV.ReadOnly = true;
+            this.VOCDEV.Width = 76;
+            // 
+            // ISC
+            // 
+            this.ISC.HeaderText = "ISC";
+            this.ISC.Name = "ISC";
+            this.ISC.ReadOnly = true;
+            this.ISC.Width = 49;
+            // 
+            // ISCDEV
+            // 
+            this.ISCDEV.HeaderText = "ISCDEV";
+            this.ISCDEV.Name = "ISCDEV";
+            this.ISCDEV.ReadOnly = true;
+            this.ISCDEV.Width = 71;
+            // 
+            // FF
+            // 
+            this.FF.HeaderText = "FF";
+            this.FF.Name = "FF";
+            this.FF.ReadOnly = true;
+            this.FF.Width = 44;
+            // 
+            // FFDEV
+            // 
+            this.FFDEV.HeaderText = "FFDEV";
+            this.FFDEV.Name = "FFDEV";
+            this.FFDEV.ReadOnly = true;
+            this.FFDEV.Width = 66;
+            // 
+            // E
+            // 
+            this.E.HeaderText = "E";
+            this.E.Name = "E";
+            this.E.ReadOnly = true;
+            this.E.Width = 39;
+            // 
+            // EDEV
+            // 
+            this.EDEV.HeaderText = "EDEV";
+            this.EDEV.Name = "EDEV";
+            this.EDEV.ReadOnly = true;
+            this.EDEV.Width = 61;
+            // 
+            // DATE_TIME
+            // 
+            this.DATE_TIME.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCellsExceptHeader;
+            this.DATE_TIME.HeaderText = "DATE_TIME";
+            this.DATE_TIME.Name = "DATE_TIME";
+            this.DATE_TIME.ReadOnly = true;
+            this.DATE_TIME.Width = 5;
+            // 
+            // DESCRIPTION
+            // 
+            this.DESCRIPTION.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCellsExceptHeader;
+            this.DESCRIPTION.HeaderText = "DESCRIPTION";
+            this.DESCRIPTION.Name = "DESCRIPTION";
+            this.DESCRIPTION.ReadOnly = true;
+            this.DESCRIPTION.Width = 5;
+            // 
+            // TEMP
+            // 
+            this.TEMP.HeaderText = "TEMP";
+            this.TEMP.Name = "TEMP";
+            this.TEMP.ReadOnly = true;
+            this.TEMP.Width = 62;
+            // 
+            // TEMPDEV
+            // 
+            this.TEMPDEV.HeaderText = "TEMPDEV";
+            this.TEMPDEV.Name = "TEMPDEV";
+            this.TEMPDEV.ReadOnly = true;
+            this.TEMPDEV.Width = 84;
+            // 
+            // INUSE
+            // 
+            this.INUSE.HeaderText = "INUSE";
+            this.INUSE.Name = "INUSE";
+            this.INUSE.ReadOnly = true;
+            this.INUSE.Width = 65;
+            // 
+            // inuseCombobox
+            // 
+            this.inuseCombobox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.inuseCombobox.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.inuseCombobox.FormattingEnabled = true;
+            this.inuseCombobox.Items.AddRange(new object[] {
+            "True",
+            "False"});
+            this.inuseCombobox.Location = new System.Drawing.Point(13, 13);
+            this.inuseCombobox.Name = "inuseCombobox";
+            this.inuseCombobox.Size = new System.Drawing.Size(97, 21);
+            this.inuseCombobox.TabIndex = 5;
+            this.inuseCombobox.SelectedIndexChanged += new System.EventHandler(this.inuseCombobox_SelectedIndexChanged);
+            // 
+            // editCheckBox
+            // 
+            this.editCheckBox.AutoSize = true;
+            this.editCheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.editCheckBox.Location = new System.Drawing.Point(28, 19);
+            this.editCheckBox.Name = "editCheckBox";
+            this.editCheckBox.Size = new System.Drawing.Size(81, 17);
+            this.editCheckBox.TabIndex = 20;
+            this.editCheckBox.Text = "Wy³¹czona";
+            this.editCheckBox.UseVisualStyleBackColor = true;
+            this.editCheckBox.CheckedChanged += new System.EventHandler(this.editCheckBox_CheckedChanged);
+            // 
+            // editGroupBox
+            // 
+            this.editGroupBox.Controls.Add(this.editCheckBox);
+            this.editGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.editGroupBox.Location = new System.Drawing.Point(1489, 9);
+            this.editGroupBox.Name = "editGroupBox";
+            this.editGroupBox.Size = new System.Drawing.Size(128, 45);
+            this.editGroupBox.TabIndex = 23;
+            this.editGroupBox.TabStop = false;
+            this.editGroupBox.Text = "Edycja";
+            // 
+            // idGroupBox
+            // 
+            this.idGroupBox.Controls.Add(this.idTextbox);
+            this.idGroupBox.Enabled = false;
+            this.idGroupBox.Location = new System.Drawing.Point(40, 326);
+            this.idGroupBox.Name = "idGroupBox";
+            this.idGroupBox.Size = new System.Drawing.Size(150, 52);
+            this.idGroupBox.TabIndex = 24;
+            this.idGroupBox.TabStop = false;
+            this.idGroupBox.Text = "ID";
+            // 
+            // idTextbox
+            // 
+            this.idTextbox.Location = new System.Drawing.Point(6, 19);
+            this.idTextbox.Name = "idTextbox";
+            this.idTextbox.Size = new System.Drawing.Size(138, 20);
+            this.idTextbox.TabIndex = 12;
+            // 
+            // moduleSearchTextbox
+            // 
+            this.moduleSearchTextbox.Location = new System.Drawing.Point(392, 12);
+            this.moduleSearchTextbox.Name = "moduleSearchTextbox";
+            this.moduleSearchTextbox.Size = new System.Drawing.Size(138, 20);
+            this.moduleSearchTextbox.TabIndex = 12;
+            this.moduleSearchTextbox.TextChanged += new System.EventHandler(this.moduleNameTextbox_TextChanged);
+            // 
+            // ffGroupBox
+            // 
+            this.ffGroupBox.Controls.Add(this.ffTextbox);
+            this.ffGroupBox.Enabled = false;
+            this.ffGroupBox.Location = new System.Drawing.Point(40, 412);
+            this.ffGroupBox.Name = "ffGroupBox";
+            this.ffGroupBox.Size = new System.Drawing.Size(150, 52);
+            this.ffGroupBox.TabIndex = 25;
+            this.ffGroupBox.TabStop = false;
+            this.ffGroupBox.Text = "FF";
+            // 
+            // ffTextbox
+            // 
+            this.ffTextbox.Location = new System.Drawing.Point(6, 19);
+            this.ffTextbox.Name = "ffTextbox";
+            this.ffTextbox.Size = new System.Drawing.Size(138, 20);
+            this.ffTextbox.TabIndex = 12;
+            // 
+            // ffdevTextbox
+            // 
+            this.ffdevTextbox.Location = new System.Drawing.Point(6, 19);
+            this.ffdevTextbox.Name = "ffdevTextbox";
+            this.ffdevTextbox.Size = new System.Drawing.Size(138, 20);
+            this.ffdevTextbox.TabIndex = 12;
+            // 
+            // testerTextbox
+            // 
+            this.testerTextbox.Location = new System.Drawing.Point(6, 19);
+            this.testerTextbox.Name = "testerTextbox";
+            this.testerTextbox.Size = new System.Drawing.Size(138, 20);
+            this.testerTextbox.TabIndex = 12;
+            // 
+            // eTextbox
+            // 
+            this.eTextbox.Location = new System.Drawing.Point(6, 19);
+            this.eTextbox.Name = "eTextbox";
+            this.eTextbox.Size = new System.Drawing.Size(138, 20);
+            this.eTextbox.TabIndex = 12;
+            // 
+            // edevTextbox
+            // 
+            this.edevTextbox.Location = new System.Drawing.Point(6, 19);
+            this.edevTextbox.Name = "edevTextbox";
+            this.edevTextbox.Size = new System.Drawing.Size(138, 20);
+            this.edevTextbox.TabIndex = 12;
+            // 
+            // pwrTextbox
+            // 
+            this.pwrTextbox.Location = new System.Drawing.Point(6, 19);
+            this.pwrTextbox.Name = "pwrTextbox";
+            this.pwrTextbox.Size = new System.Drawing.Size(138, 20);
+            this.pwrTextbox.TabIndex = 12;
+            // 
+            // pwrdevTextbox
+            // 
+            this.pwrdevTextbox.Location = new System.Drawing.Point(6, 19);
+            this.pwrdevTextbox.Name = "pwrdevTextbox";
+            this.pwrdevTextbox.Size = new System.Drawing.Size(138, 20);
+            this.pwrdevTextbox.TabIndex = 12;
+            // 
+            // date_timeGroupBox
+            // 
+            this.date_timeGroupBox.Controls.Add(this.TimePicker);
+            this.date_timeGroupBox.Controls.Add(this.DateTimePicker);
+            this.date_timeGroupBox.Enabled = false;
+            this.date_timeGroupBox.Location = new System.Drawing.Point(736, 412);
+            this.date_timeGroupBox.Name = "date_timeGroupBox";
+            this.date_timeGroupBox.Size = new System.Drawing.Size(150, 76);
+            this.date_timeGroupBox.TabIndex = 26;
+            this.date_timeGroupBox.TabStop = false;
+            this.date_timeGroupBox.Text = "DATE_TIME";
+            // 
+            // TimePicker
+            // 
+            this.TimePicker.Location = new System.Drawing.Point(39, 45);
+            this.TimePicker.Name = "TimePicker";
+            this.TimePicker.Size = new System.Drawing.Size(80, 20);
+            this.TimePicker.TabIndex = 47;
+            this.TimePicker.Value = new System.DateTime(2017, 8, 11, 0, 0, 0, 0);
+            // 
+            // DateTimePicker
+            // 
+            this.DateTimePicker.Location = new System.Drawing.Point(6, 19);
+            this.DateTimePicker.Name = "DateTimePicker";
+            this.DateTimePicker.Size = new System.Drawing.Size(138, 20);
+            this.DateTimePicker.TabIndex = 46;
+            this.DateTimePicker.Value = new System.DateTime(2012, 1, 1, 0, 0, 0, 0);
+            // 
+            // descriptionTextbox
+            // 
+            this.descriptionTextbox.Location = new System.Drawing.Point(6, 19);
+            this.descriptionTextbox.Name = "descriptionTextbox";
+            this.descriptionTextbox.Size = new System.Drawing.Size(138, 20);
+            this.descriptionTextbox.TabIndex = 12;
+            // 
+            // vocTextbox
+            // 
+            this.vocTextbox.Location = new System.Drawing.Point(6, 19);
+            this.vocTextbox.Name = "vocTextbox";
+            this.vocTextbox.Size = new System.Drawing.Size(138, 20);
+            this.vocTextbox.TabIndex = 12;
+            // 
+            // tempTextbox
+            // 
+            this.tempTextbox.Location = new System.Drawing.Point(6, 19);
+            this.tempTextbox.Name = "tempTextbox";
+            this.tempTextbox.Size = new System.Drawing.Size(138, 20);
+            this.tempTextbox.TabIndex = 12;
+            // 
+            // vocdevTextbox
+            // 
+            this.vocdevTextbox.Location = new System.Drawing.Point(6, 19);
+            this.vocdevTextbox.Name = "vocdevTextbox";
+            this.vocdevTextbox.Size = new System.Drawing.Size(138, 20);
+            this.vocdevTextbox.TabIndex = 12;
+            // 
+            // iscTextbox
+            // 
+            this.iscTextbox.Location = new System.Drawing.Point(6, 19);
+            this.iscTextbox.Name = "iscTextbox";
+            this.iscTextbox.Size = new System.Drawing.Size(138, 20);
+            this.iscTextbox.TabIndex = 12;
+            // 
+            // tempdevTextbox
+            // 
+            this.tempdevTextbox.Location = new System.Drawing.Point(6, 19);
+            this.tempdevTextbox.Name = "tempdevTextbox";
+            this.tempdevTextbox.Size = new System.Drawing.Size(138, 20);
+            this.tempdevTextbox.TabIndex = 12;
+            // 
+            // iscdevTextbox
+            // 
+            this.iscdevTextbox.Location = new System.Drawing.Point(6, 19);
+            this.iscdevTextbox.Name = "iscdevTextbox";
+            this.iscdevTextbox.Size = new System.Drawing.Size(138, 20);
+            this.iscdevTextbox.TabIndex = 12;
+            // 
+            // module_snTextbox
+            // 
+            this.module_snTextbox.Location = new System.Drawing.Point(6, 19);
+            this.module_snTextbox.Name = "module_snTextbox";
+            this.module_snTextbox.Size = new System.Drawing.Size(138, 20);
+            this.module_snTextbox.TabIndex = 12;
+            // 
+            // inuseTextbox
+            // 
+            this.inuseTextbox.Location = new System.Drawing.Point(6, 19);
+            this.inuseTextbox.Name = "inuseTextbox";
+            this.inuseTextbox.Size = new System.Drawing.Size(138, 20);
+            this.inuseTextbox.TabIndex = 12;
+            this.inuseTextbox.Text = "True";
+            // 
+            // inuseGroupBox
+            // 
+            this.inuseGroupBox.Controls.Add(this.inuseTextbox);
+            this.inuseGroupBox.Enabled = false;
+            this.inuseGroupBox.Location = new System.Drawing.Point(1430, 412);
+            this.inuseGroupBox.Name = "inuseGroupBox";
+            this.inuseGroupBox.Size = new System.Drawing.Size(150, 52);
+            this.inuseGroupBox.TabIndex = 27;
+            this.inuseGroupBox.TabStop = false;
+            this.inuseGroupBox.Text = "INUSE";
+            // 
+            // iscdevGroupBox
+            // 
+            this.iscdevGroupBox.Controls.Add(this.iscdevTextbox);
+            this.iscdevGroupBox.Enabled = false;
+            this.iscdevGroupBox.Location = new System.Drawing.Point(1430, 326);
+            this.iscdevGroupBox.Name = "iscdevGroupBox";
+            this.iscdevGroupBox.Size = new System.Drawing.Size(150, 52);
+            this.iscdevGroupBox.TabIndex = 28;
+            this.iscdevGroupBox.TabStop = false;
+            this.iscdevGroupBox.Text = "ISCDEV";
+            // 
+            // tempdevGroupBox
+            // 
+            this.tempdevGroupBox.Controls.Add(this.tempdevTextbox);
+            this.tempdevGroupBox.Enabled = false;
+            this.tempdevGroupBox.Location = new System.Drawing.Point(1261, 412);
+            this.tempdevGroupBox.Name = "tempdevGroupBox";
+            this.tempdevGroupBox.Size = new System.Drawing.Size(150, 52);
+            this.tempdevGroupBox.TabIndex = 29;
+            this.tempdevGroupBox.TabStop = false;
+            this.tempdevGroupBox.Text = "TEMPDEV";
+            // 
+            // iscGroupBox
+            // 
+            this.iscGroupBox.Controls.Add(this.iscTextbox);
+            this.iscGroupBox.Enabled = false;
+            this.iscGroupBox.Location = new System.Drawing.Point(1261, 326);
+            this.iscGroupBox.Name = "iscGroupBox";
+            this.iscGroupBox.Size = new System.Drawing.Size(150, 52);
+            this.iscGroupBox.TabIndex = 30;
+            this.iscGroupBox.TabStop = false;
+            this.iscGroupBox.Text = "ISC";
+            // 
+            // edevGroupBox
+            // 
+            this.edevGroupBox.Controls.Add(this.edevTextbox);
+            this.edevGroupBox.Enabled = false;
+            this.edevGroupBox.Location = new System.Drawing.Point(561, 412);
+            this.edevGroupBox.Name = "edevGroupBox";
+            this.edevGroupBox.Size = new System.Drawing.Size(150, 52);
+            this.edevGroupBox.TabIndex = 31;
+            this.edevGroupBox.TabStop = false;
+            this.edevGroupBox.Text = "EDEV";
+            // 
+            // pwrGroupBox
+            // 
+            this.pwrGroupBox.Controls.Add(this.pwrTextbox);
+            this.pwrGroupBox.Enabled = false;
+            this.pwrGroupBox.Location = new System.Drawing.Point(561, 326);
+            this.pwrGroupBox.Name = "pwrGroupBox";
+            this.pwrGroupBox.Size = new System.Drawing.Size(150, 52);
+            this.pwrGroupBox.TabIndex = 32;
+            this.pwrGroupBox.TabStop = false;
+            this.pwrGroupBox.Text = "PWR";
+            // 
+            // descriptionGroupBox
+            // 
+            this.descriptionGroupBox.Controls.Add(this.descriptionTextbox);
+            this.descriptionGroupBox.Enabled = false;
+            this.descriptionGroupBox.Location = new System.Drawing.Point(911, 412);
+            this.descriptionGroupBox.Name = "descriptionGroupBox";
+            this.descriptionGroupBox.Size = new System.Drawing.Size(150, 52);
+            this.descriptionGroupBox.TabIndex = 33;
+            this.descriptionGroupBox.TabStop = false;
+            this.descriptionGroupBox.Text = "DESCRIPTION";
+            // 
+            // vocGroupBox
+            // 
+            this.vocGroupBox.Controls.Add(this.vocTextbox);
+            this.vocGroupBox.Enabled = false;
+            this.vocGroupBox.Location = new System.Drawing.Point(911, 326);
+            this.vocGroupBox.Name = "vocGroupBox";
+            this.vocGroupBox.Size = new System.Drawing.Size(150, 52);
+            this.vocGroupBox.TabIndex = 34;
+            this.vocGroupBox.TabStop = false;
+            this.vocGroupBox.Text = "VOC";
+            // 
+            // ffdevGroupBox
+            // 
+            this.ffdevGroupBox.Controls.Add(this.ffdevTextbox);
+            this.ffdevGroupBox.Enabled = false;
+            this.ffdevGroupBox.Location = new System.Drawing.Point(211, 412);
+            this.ffdevGroupBox.Name = "ffdevGroupBox";
+            this.ffdevGroupBox.Size = new System.Drawing.Size(150, 52);
+            this.ffdevGroupBox.TabIndex = 35;
+            this.ffdevGroupBox.TabStop = false;
+            this.ffdevGroupBox.Text = "FFDEV";
+            // 
+            // module_snGroupBox
+            // 
+            this.module_snGroupBox.Controls.Add(this.module_snTextbox);
+            this.module_snGroupBox.Enabled = false;
+            this.module_snGroupBox.Location = new System.Drawing.Point(211, 326);
+            this.module_snGroupBox.Name = "module_snGroupBox";
+            this.module_snGroupBox.Size = new System.Drawing.Size(150, 52);
+            this.module_snGroupBox.TabIndex = 36;
+            this.module_snGroupBox.TabStop = false;
+            this.module_snGroupBox.Text = "MODULE_SN";
+            // 
+            // tempGroupBox
+            // 
+            this.tempGroupBox.Controls.Add(this.tempTextbox);
+            this.tempGroupBox.Enabled = false;
+            this.tempGroupBox.Location = new System.Drawing.Point(1086, 412);
+            this.tempGroupBox.Name = "tempGroupBox";
+            this.tempGroupBox.Size = new System.Drawing.Size(150, 52);
+            this.tempGroupBox.TabIndex = 37;
+            this.tempGroupBox.TabStop = false;
+            this.tempGroupBox.Text = "TEMP";
+            // 
+            // vocdevGroupBox
+            // 
+            this.vocdevGroupBox.Controls.Add(this.vocdevTextbox);
+            this.vocdevGroupBox.Enabled = false;
+            this.vocdevGroupBox.Location = new System.Drawing.Point(1086, 326);
+            this.vocdevGroupBox.Name = "vocdevGroupBox";
+            this.vocdevGroupBox.Size = new System.Drawing.Size(150, 52);
+            this.vocdevGroupBox.TabIndex = 38;
+            this.vocdevGroupBox.TabStop = false;
+            this.vocdevGroupBox.Text = "VOCDEV";
+            // 
+            // eGroupBox
+            // 
+            this.eGroupBox.Controls.Add(this.eTextbox);
+            this.eGroupBox.Enabled = false;
+            this.eGroupBox.Location = new System.Drawing.Point(386, 412);
+            this.eGroupBox.Name = "eGroupBox";
+            this.eGroupBox.Size = new System.Drawing.Size(150, 52);
+            this.eGroupBox.TabIndex = 39;
+            this.eGroupBox.TabStop = false;
+            this.eGroupBox.Text = "E";
+            // 
+            // testerGroupBox
+            // 
+            this.testerGroupBox.Controls.Add(this.testerTextbox);
+            this.testerGroupBox.Enabled = false;
+            this.testerGroupBox.Location = new System.Drawing.Point(386, 326);
+            this.testerGroupBox.Name = "testerGroupBox";
+            this.testerGroupBox.Size = new System.Drawing.Size(150, 52);
+            this.testerGroupBox.TabIndex = 40;
+            this.testerGroupBox.TabStop = false;
+            this.testerGroupBox.Text = "TESTER";
+            // 
+            // pwrdevGroupBox
+            // 
+            this.pwrdevGroupBox.Controls.Add(this.pwrdevTextbox);
+            this.pwrdevGroupBox.Enabled = false;
+            this.pwrdevGroupBox.Location = new System.Drawing.Point(736, 326);
+            this.pwrdevGroupBox.Name = "pwrdevGroupBox";
+            this.pwrdevGroupBox.Size = new System.Drawing.Size(150, 52);
+            this.pwrdevGroupBox.TabIndex = 41;
+            this.pwrdevGroupBox.TabStop = false;
+            this.pwrdevGroupBox.Text = "PWRDEV";
+            // 
+            // addCheckBox
+            // 
+            this.addCheckBox.AutoSize = true;
+            this.addCheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.addCheckBox.Location = new System.Drawing.Point(24, 28);
+            this.addCheckBox.Name = "addCheckBox";
+            this.addCheckBox.Size = new System.Drawing.Size(81, 17);
+            this.addCheckBox.TabIndex = 0;
+            this.addCheckBox.Text = "Wy³¹czone";
+            this.addCheckBox.UseVisualStyleBackColor = true;
+            this.addCheckBox.CheckedChanged += new System.EventHandler(this.addCheckBox_CheckedChanged);
+            // 
+            // addGroupBox
+            // 
+            this.addGroupBox.Controls.Add(this.addCheckBox);
+            this.addGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.addGroupBox.Location = new System.Drawing.Point(46, 254);
+            this.addGroupBox.Name = "addGroupBox";
+            this.addGroupBox.Size = new System.Drawing.Size(138, 66);
+            this.addGroupBox.TabIndex = 42;
+            this.addGroupBox.TabStop = false;
+            this.addGroupBox.Text = "Dodawanie wierszy";
+            // 
+            // clearButton
+            // 
+            this.clearButton.Enabled = false;
+            this.clearButton.Location = new System.Drawing.Point(496, 509);
+            this.clearButton.Name = "clearButton";
+            this.clearButton.Size = new System.Drawing.Size(119, 23);
+            this.clearButton.TabIndex = 45;
+            this.clearButton.Text = "Wyczyœæ pola";
+            this.clearButton.UseVisualStyleBackColor = true;
+            this.clearButton.Click += new System.EventHandler(this.clearButton_Click);
+            // 
+            // deleteRowButton
+            // 
+            this.deleteRowButton.Enabled = false;
+            this.deleteRowButton.Location = new System.Drawing.Point(363, 509);
+            this.deleteRowButton.Name = "deleteRowButton";
+            this.deleteRowButton.Size = new System.Drawing.Size(75, 23);
+            this.deleteRowButton.TabIndex = 44;
+            this.deleteRowButton.Text = "Usuñ wiersz";
+            this.deleteRowButton.UseVisualStyleBackColor = true;
+            this.deleteRowButton.Click += new System.EventHandler(this.deleteRowButton_Click);
+            // 
+            // addRowButton
+            // 
+            this.addRowButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.addRowButton.Enabled = false;
+            this.addRowButton.Location = new System.Drawing.Point(217, 509);
+            this.addRowButton.Name = "addRowButton";
+            this.addRowButton.Size = new System.Drawing.Size(75, 23);
+            this.addRowButton.TabIndex = 43;
+            this.addRowButton.Text = "Dodaj wiersz";
+            this.addRowButton.UseVisualStyleBackColor = true;
+            this.addRowButton.Click += new System.EventHandler(this.AddRowButton_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label2.Location = new System.Drawing.Point(260, 15);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(135, 13);
+            this.label2.TabIndex = 46;
+            this.label2.Text = "Wpisz nazwê modu³u: ";
+            // 
+            // searchModuleButton
+            // 
+            this.searchModuleButton.Location = new System.Drawing.Point(579, 12);
+            this.searchModuleButton.Name = "searchModuleButton";
+            this.searchModuleButton.Size = new System.Drawing.Size(75, 23);
+            this.searchModuleButton.TabIndex = 47;
+            this.searchModuleButton.Text = "Szukaj";
+            this.searchModuleButton.UseVisualStyleBackColor = true;
+            this.searchModuleButton.Click += new System.EventHandler(this.searchModuleButton_Click);
+            // 
+            // Form1
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(1656, 573);
+            this.Controls.Add(this.searchModuleButton);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.moduleSearchTextbox);
+            this.Controls.Add(this.clearButton);
+            this.Controls.Add(this.deleteRowButton);
+            this.Controls.Add(this.addRowButton);
+            this.Controls.Add(this.addGroupBox);
+            this.Controls.Add(this.date_timeGroupBox);
+            this.Controls.Add(this.inuseGroupBox);
+            this.Controls.Add(this.iscdevGroupBox);
+            this.Controls.Add(this.tempdevGroupBox);
+            this.Controls.Add(this.iscGroupBox);
+            this.Controls.Add(this.edevGroupBox);
+            this.Controls.Add(this.pwrGroupBox);
+            this.Controls.Add(this.descriptionGroupBox);
+            this.Controls.Add(this.vocGroupBox);
+            this.Controls.Add(this.ffdevGroupBox);
+            this.Controls.Add(this.module_snGroupBox);
+            this.Controls.Add(this.tempGroupBox);
+            this.Controls.Add(this.vocdevGroupBox);
+            this.Controls.Add(this.eGroupBox);
+            this.Controls.Add(this.testerGroupBox);
+            this.Controls.Add(this.pwrdevGroupBox);
+            this.Controls.Add(this.ffGroupBox);
+            this.Controls.Add(this.idGroupBox);
+            this.Controls.Add(this.editGroupBox);
+            this.Controls.Add(this.inuseCombobox);
+            this.Controls.Add(this.dataGridView);
+            this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "FLASHCALIB_DATA";
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
+            this.editGroupBox.ResumeLayout(false);
+            this.editGroupBox.PerformLayout();
+            this.idGroupBox.ResumeLayout(false);
+            this.idGroupBox.PerformLayout();
+            this.ffGroupBox.ResumeLayout(false);
+            this.ffGroupBox.PerformLayout();
+            this.date_timeGroupBox.ResumeLayout(false);
+            this.inuseGroupBox.ResumeLayout(false);
+            this.inuseGroupBox.PerformLayout();
+            this.iscdevGroupBox.ResumeLayout(false);
+            this.iscdevGroupBox.PerformLayout();
+            this.tempdevGroupBox.ResumeLayout(false);
+            this.tempdevGroupBox.PerformLayout();
+            this.iscGroupBox.ResumeLayout(false);
+            this.iscGroupBox.PerformLayout();
+            this.edevGroupBox.ResumeLayout(false);
+            this.edevGroupBox.PerformLayout();
+            this.pwrGroupBox.ResumeLayout(false);
+            this.pwrGroupBox.PerformLayout();
+            this.descriptionGroupBox.ResumeLayout(false);
+            this.descriptionGroupBox.PerformLayout();
+            this.vocGroupBox.ResumeLayout(false);
+            this.vocGroupBox.PerformLayout();
+            this.ffdevGroupBox.ResumeLayout(false);
+            this.ffdevGroupBox.PerformLayout();
+            this.module_snGroupBox.ResumeLayout(false);
+            this.module_snGroupBox.PerformLayout();
+            this.tempGroupBox.ResumeLayout(false);
+            this.tempGroupBox.PerformLayout();
+            this.vocdevGroupBox.ResumeLayout(false);
+            this.vocdevGroupBox.PerformLayout();
+            this.eGroupBox.ResumeLayout(false);
+            this.eGroupBox.PerformLayout();
+            this.testerGroupBox.ResumeLayout(false);
+            this.testerGroupBox.PerformLayout();
+            this.pwrdevGroupBox.ResumeLayout(false);
+            this.pwrdevGroupBox.PerformLayout();
+            this.addGroupBox.ResumeLayout(false);
+            this.addGroupBox.PerformLayout();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
+        }
+
+        #endregion
+        private System.Windows.Forms.DataGridView dataGridView;
+        private System.Windows.Forms.ComboBox inuseCombobox;
+        private System.Windows.Forms.CheckBox editCheckBox;
+        private System.Windows.Forms.GroupBox editGroupBox;
+        private System.Windows.Forms.GroupBox idGroupBox;
+        private System.Windows.Forms.TextBox moduleSearchTextbox;
+        private System.Windows.Forms.GroupBox ffGroupBox;
+        private System.Windows.Forms.TextBox ffTextbox;
+        private System.Windows.Forms.TextBox ffdevTextbox;
+        private System.Windows.Forms.TextBox testerTextbox;
+        private System.Windows.Forms.TextBox eTextbox;
+        private System.Windows.Forms.TextBox edevTextbox;
+        private System.Windows.Forms.TextBox pwrTextbox;
+        private System.Windows.Forms.TextBox pwrdevTextbox;
+        private System.Windows.Forms.GroupBox date_timeGroupBox;
+        private System.Windows.Forms.TextBox descriptionTextbox;
+        private System.Windows.Forms.TextBox vocTextbox;
+        private System.Windows.Forms.TextBox tempTextbox;
+        private System.Windows.Forms.TextBox vocdevTextbox;
+        private System.Windows.Forms.TextBox iscTextbox;
+        private System.Windows.Forms.TextBox tempdevTextbox;
+        private System.Windows.Forms.TextBox iscdevTextbox;
+        private System.Windows.Forms.TextBox module_snTextbox;
+        private System.Windows.Forms.TextBox inuseTextbox;
+        private System.Windows.Forms.GroupBox inuseGroupBox;
+        private System.Windows.Forms.GroupBox iscdevGroupBox;
+        private System.Windows.Forms.GroupBox tempdevGroupBox;
+        private System.Windows.Forms.GroupBox iscGroupBox;
+        private System.Windows.Forms.GroupBox edevGroupBox;
+        private System.Windows.Forms.GroupBox pwrGroupBox;
+        private System.Windows.Forms.GroupBox descriptionGroupBox;
+        private System.Windows.Forms.GroupBox vocGroupBox;
+        private System.Windows.Forms.GroupBox ffdevGroupBox;
+        private System.Windows.Forms.GroupBox module_snGroupBox;
+        private System.Windows.Forms.GroupBox tempGroupBox;
+        private System.Windows.Forms.GroupBox vocdevGroupBox;
+        private System.Windows.Forms.GroupBox eGroupBox;
+        private System.Windows.Forms.GroupBox testerGroupBox;
+        private System.Windows.Forms.GroupBox pwrdevGroupBox;
+        private System.Windows.Forms.CheckBox addCheckBox;
+        private System.Windows.Forms.GroupBox addGroupBox;
+        private System.Windows.Forms.Button clearButton;
+        private System.Windows.Forms.Button deleteRowButton;
+        private System.Windows.Forms.Button addRowButton;
+        private System.Windows.Forms.DateTimePicker TimePicker;
+        private System.Windows.Forms.DateTimePicker DateTimePicker;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button searchModuleButton;
+        private System.Windows.Forms.TextBox idTextbox;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MODULE_SN;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TESTER;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PWR;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PWRDEV;
+        private System.Windows.Forms.DataGridViewTextBoxColumn VOC;
+        private System.Windows.Forms.DataGridViewTextBoxColumn VOCDEV;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ISC;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ISCDEV;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FF;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FFDEV;
+        private System.Windows.Forms.DataGridViewTextBoxColumn E;
+        private System.Windows.Forms.DataGridViewTextBoxColumn EDEV;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DATE_TIME;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DESCRIPTION;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TEMP;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TEMPDEV;
+        private System.Windows.Forms.DataGridViewTextBoxColumn INUSE;
+    }
+}
+

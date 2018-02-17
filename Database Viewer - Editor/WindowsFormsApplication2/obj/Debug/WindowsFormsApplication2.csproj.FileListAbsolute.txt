@@ -1,0 +1,112 @@
+c:\users\100047004\documents\visual studio 2015\Projects\WindowsFormsApplication2\WindowsFormsApplication2\bin\Debug\WindowsFormsApplication2.exe.config
+c:\users\100047004\documents\visual studio 2015\Projects\WindowsFormsApplication2\WindowsFormsApplication2\bin\Debug\WindowsFormsApplication2.exe
+c:\users\100047004\documents\visual studio 2015\Projects\WindowsFormsApplication2\WindowsFormsApplication2\bin\Debug\WindowsFormsApplication2.pdb
+c:\users\100047004\documents\visual studio 2015\Projects\WindowsFormsApplication2\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.csprojResolveAssemblyReference.cache
+c:\users\100047004\documents\visual studio 2015\Projects\WindowsFormsApplication2\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.Form1.resources
+c:\users\100047004\documents\visual studio 2015\Projects\WindowsFormsApplication2\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.Properties.Resources.resources
+c:\users\100047004\documents\visual studio 2015\Projects\WindowsFormsApplication2\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.csproj.GenerateResource.Cache
+c:\users\100047004\documents\visual studio 2015\Projects\WindowsFormsApplication2\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.exe
+c:\users\100047004\documents\visual studio 2015\Projects\WindowsFormsApplication2\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.pdb
+C:\Users\100047004\Documents\Visual Studio 2015\Projects\WindowsFormsApplication2\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.Form2.resources
+C:\Users\100047004\Downloads\nowikowski\WindowsFormsApplication2\WindowsFormsApplication2\bin\Debug\WindowsFormsApplication2.exe.config
+C:\Users\100047004\Downloads\nowikowski\WindowsFormsApplication2\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.exe
+C:\Users\100047004\Downloads\nowikowski\WindowsFormsApplication2\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.pdb
+C:\Users\100047004\Downloads\nowikowski\WindowsFormsApplication2\WindowsFormsApplication2\bin\Debug\WindowsFormsApplication2.exe
+C:\Users\100047004\Downloads\nowikowski\WindowsFormsApplication2\WindowsFormsApplication2\bin\Debug\WindowsFormsApplication2.pdb
+C:\Users\100047004\Downloads\nowikowski\WindowsFormsApplication2\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.csprojResolveAssemblyReference.cache
+C:\Users\100047004\Downloads\nowikowski\WindowsFormsApplication2\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.Form1.resources
+C:\Users\100047004\Downloads\nowikowski\WindowsFormsApplication2\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.Form2.resources
+C:\Users\100047004\Downloads\nowikowski\WindowsFormsApplication2\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.Properties.Resources.resources
+C:\Users\100047004\Downloads\nowikowski\WindowsFormsApplication2\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.csproj.GenerateResource.Cache
+C:\Users\100047004\Downloads\nowikowski\WindowsFormsApplication2\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.Form3.resources
+C:\Users\100047004\Downloads\nowikowski\WindowsFormsApplication2\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.Charts.resources
+C:\Users\100047004\Downloads\nowikowski\WindowsFormsApplication2\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.Form4.resources
+C:\Users\100047004\Downloads\nowikowski\WindowsFormsApplication2\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.Test.resources
+C:\Users\100047004\Documents\jaknow\aplikacja do kalibracji modułów\nowikowski\WindowsFormsApplication2\WindowsFormsApplication2\bin\Debug\WindowsFormsApplication2.exe.config
+C:\Users\100047004\Documents\jaknow\aplikacja do kalibracji modułów\nowikowski\WindowsFormsApplication2\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.exe
+C:\Users\100047004\Documents\jaknow\aplikacja do kalibracji modułów\nowikowski\WindowsFormsApplication2\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.pdb
+C:\Users\100047004\Documents\jaknow\aplikacja do kalibracji modułów\nowikowski\WindowsFormsApplication2\WindowsFormsApplication2\bin\Debug\WindowsFormsApplication2.exe
+C:\Users\100047004\Documents\jaknow\aplikacja do kalibracji modułów\nowikowski\WindowsFormsApplication2\WindowsFormsApplication2\bin\Debug\WindowsFormsApplication2.pdb
+C:\Users\100047004\Documents\jaknow\aplikacja do kalibracji modułów\nowikowski\WindowsFormsApplication2\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.csprojResolveAssemblyReference.cache
+C:\Users\100047004\Documents\jaknow\aplikacja do kalibracji modułów\nowikowski\WindowsFormsApplication2\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.Charts.resources
+C:\Users\100047004\Documents\jaknow\aplikacja do kalibracji modułów\nowikowski\WindowsFormsApplication2\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.Form1.resources
+C:\Users\100047004\Documents\jaknow\aplikacja do kalibracji modułów\nowikowski\WindowsFormsApplication2\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.Form2.resources
+C:\Users\100047004\Documents\jaknow\aplikacja do kalibracji modułów\nowikowski\WindowsFormsApplication2\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.Form3.resources
+C:\Users\100047004\Documents\jaknow\aplikacja do kalibracji modułów\nowikowski\WindowsFormsApplication2\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.Form4.resources
+C:\Users\100047004\Documents\jaknow\aplikacja do kalibracji modułów\nowikowski\WindowsFormsApplication2\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.Properties.Resources.resources
+C:\Users\100047004\Documents\jaknow\aplikacja do kalibracji modułów\nowikowski\WindowsFormsApplication2\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.Test.resources
+C:\Users\100047004\Documents\jaknow\aplikacja do kalibracji modułów\nowikowski\WindowsFormsApplication2\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.csproj.GenerateResource.Cache
+C:\Users\100047004\Documents\jaknow\aplikacja do kalibracji modułów\nowikowski\app\WindowsFormsApplication2\bin\Debug\WindowsFormsApplication2.exe.config
+C:\Users\100047004\Documents\jaknow\aplikacja do kalibracji modułów\nowikowski\app\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.exe
+C:\Users\100047004\Documents\jaknow\aplikacja do kalibracji modułów\nowikowski\app\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.pdb
+C:\Users\100047004\Documents\jaknow\aplikacja do kalibracji modułów\nowikowski\app\WindowsFormsApplication2\bin\Debug\WindowsFormsApplication2.exe
+C:\Users\100047004\Documents\jaknow\aplikacja do kalibracji modułów\nowikowski\app\WindowsFormsApplication2\bin\Debug\WindowsFormsApplication2.pdb
+C:\Users\100047004\Documents\jaknow\aplikacja do kalibracji modułów\nowikowski\app\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.csprojResolveAssemblyReference.cache
+C:\Users\100047004\Documents\jaknow\aplikacja do kalibracji modułów\nowikowski\app\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.Charts.resources
+C:\Users\100047004\Documents\jaknow\aplikacja do kalibracji modułów\nowikowski\app\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.Form1.resources
+C:\Users\100047004\Documents\jaknow\aplikacja do kalibracji modułów\nowikowski\app\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.Form2.resources
+C:\Users\100047004\Documents\jaknow\aplikacja do kalibracji modułów\nowikowski\app\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.Form3.resources
+C:\Users\100047004\Documents\jaknow\aplikacja do kalibracji modułów\nowikowski\app\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.Form4.resources
+C:\Users\100047004\Documents\jaknow\aplikacja do kalibracji modułów\nowikowski\app\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.Properties.Resources.resources
+C:\Users\100047004\Documents\jaknow\aplikacja do kalibracji modułów\nowikowski\app\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.Test.resources
+C:\Users\100047004\Documents\jaknow\aplikacja do kalibracji modułów\nowikowski\app\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.csproj.GenerateResource.Cache
+C:\Users\100047004\Documents\jaknow\aplikacja do kalibracji modułów\nowikowski\appEdit\WindowsFormsApplication2\bin\Debug\WindowsFormsApplication2.exe.config
+C:\Users\100047004\Documents\jaknow\aplikacja do kalibracji modułów\nowikowski\appEdit\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.exe
+C:\Users\100047004\Documents\jaknow\aplikacja do kalibracji modułów\nowikowski\appEdit\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.pdb
+C:\Users\100047004\Documents\jaknow\aplikacja do kalibracji modułów\nowikowski\appEdit\WindowsFormsApplication2\bin\Debug\WindowsFormsApplication2.exe
+C:\Users\100047004\Documents\jaknow\aplikacja do kalibracji modułów\nowikowski\appEdit\WindowsFormsApplication2\bin\Debug\WindowsFormsApplication2.pdb
+C:\Users\100047004\Documents\jaknow\aplikacja do kalibracji modułów\nowikowski\appEdit\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.csprojResolveAssemblyReference.cache
+C:\Users\100047004\Documents\jaknow\aplikacja do kalibracji modułów\nowikowski\appEdit\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.Charts.resources
+C:\Users\100047004\Documents\jaknow\aplikacja do kalibracji modułów\nowikowski\appEdit\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.Form1.resources
+C:\Users\100047004\Documents\jaknow\aplikacja do kalibracji modułów\nowikowski\appEdit\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.Form3.resources
+C:\Users\100047004\Documents\jaknow\aplikacja do kalibracji modułów\nowikowski\appEdit\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.Properties.Resources.resources
+C:\Users\100047004\Documents\jaknow\aplikacja do kalibracji modułów\nowikowski\appEdit\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.Test.resources
+C:\Users\100047004\Documents\jaknow\aplikacja do kalibracji modułów\nowikowski\appEdit\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.csproj.GenerateResource.Cache
+C:\Users\100047004\Documents\jaknow\aplikacja do kalibracji modułów\nowikowski\appEditWykresy\WindowsFormsApplication2\bin\Debug\WindowsFormsApplication2.exe.config
+C:\Users\100047004\Documents\jaknow\aplikacja do kalibracji modułów\nowikowski\appEditWykresy\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.exe
+C:\Users\100047004\Documents\jaknow\aplikacja do kalibracji modułów\nowikowski\appEditWykresy\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.pdb
+C:\Users\100047004\Documents\jaknow\aplikacja do kalibracji modułów\nowikowski\appEditWykresy\WindowsFormsApplication2\bin\Debug\WindowsFormsApplication2.exe
+C:\Users\100047004\Documents\jaknow\aplikacja do kalibracji modułów\nowikowski\appEditWykresy\WindowsFormsApplication2\bin\Debug\WindowsFormsApplication2.pdb
+C:\Users\100047004\Documents\jaknow\aplikacja do kalibracji modułów\nowikowski\appEditWykresy\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.csprojResolveAssemblyReference.cache
+C:\Users\100047004\Documents\jaknow\aplikacja do kalibracji modułów\nowikowski\appEditWykresy\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.Charts.resources
+C:\Users\100047004\Documents\jaknow\aplikacja do kalibracji modułów\nowikowski\appEditWykresy\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.Form1.resources
+C:\Users\100047004\Documents\jaknow\aplikacja do kalibracji modułów\nowikowski\appEditWykresy\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.Form3.resources
+C:\Users\100047004\Documents\jaknow\aplikacja do kalibracji modułów\nowikowski\appEditWykresy\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.Properties.Resources.resources
+C:\Users\100047004\Documents\jaknow\aplikacja do kalibracji modułów\nowikowski\appEditWykresy\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.Test.resources
+C:\Users\100047004\Documents\jaknow\aplikacja do kalibracji modułów\nowikowski\appEditWykresy\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.csproj.GenerateResource.Cache
+L:\jaknow\Aplikacja do kalibracji modułów\WindowsFormsApplication2\bin\Debug\WindowsFormsApplication2.exe.config
+L:\jaknow\Aplikacja do kalibracji modułów\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.exe
+L:\jaknow\Aplikacja do kalibracji modułów\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.pdb
+L:\jaknow\Aplikacja do kalibracji modułów\WindowsFormsApplication2\bin\Debug\WindowsFormsApplication2.exe
+L:\jaknow\Aplikacja do kalibracji modułów\WindowsFormsApplication2\bin\Debug\WindowsFormsApplication2.pdb
+L:\jaknow\Aplikacja do kalibracji modułów\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.csprojResolveAssemblyReference.cache
+L:\jaknow\Aplikacja do kalibracji modułów\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.Charts.resources
+L:\jaknow\Aplikacja do kalibracji modułów\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.Form1.resources
+L:\jaknow\Aplikacja do kalibracji modułów\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.Form3.resources
+L:\jaknow\Aplikacja do kalibracji modułów\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.Properties.Resources.resources
+L:\jaknow\Aplikacja do kalibracji modułów\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.Test.resources
+L:\jaknow\Aplikacja do kalibracji modułów\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.csproj.GenerateResource.Cache
+G:\Documents\Visual Studio 2017\Projects\app-20171016T065056Z-001\app\WindowsFormsApplication2\bin\Debug\WindowsFormsApplication2.exe.config
+G:\Documents\Visual Studio 2017\Projects\app-20171016T065056Z-001\app\WindowsFormsApplication2\bin\Debug\WindowsFormsApplication2.exe
+G:\Documents\Visual Studio 2017\Projects\app-20171016T065056Z-001\app\WindowsFormsApplication2\bin\Debug\WindowsFormsApplication2.pdb
+G:\Documents\Visual Studio 2017\Projects\app-20171016T065056Z-001\app\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.csprojResolveAssemblyReference.cache
+G:\Documents\Visual Studio 2017\Projects\app-20171016T065056Z-001\app\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.Charts.resources
+G:\Documents\Visual Studio 2017\Projects\app-20171016T065056Z-001\app\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.Form1.resources
+G:\Documents\Visual Studio 2017\Projects\app-20171016T065056Z-001\app\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.Form3.resources
+G:\Documents\Visual Studio 2017\Projects\app-20171016T065056Z-001\app\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.Properties.Resources.resources
+G:\Documents\Visual Studio 2017\Projects\app-20171016T065056Z-001\app\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.Test.resources
+G:\Documents\Visual Studio 2017\Projects\app-20171016T065056Z-001\app\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.csproj.GenerateResource.Cache
+G:\Documents\Visual Studio 2017\Projects\app-20171016T065056Z-001\app\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.exe
+G:\Documents\Visual Studio 2017\Projects\app-20171016T065056Z-001\app\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.pdb
+G:\Documents\Visual Studio 2017\Projects\app-20171016T065056Z-001\app\WindowsFormsApplication2\bin\Debug\MySql.Data.dll
+G:\Documents\Visual Studio 2017\Projects\databejs\app\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.csprojResolveAssemblyReference.cache
+G:\Documents\Visual Studio 2017\Projects\databejs\app\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.Charts.resources
+G:\Documents\Visual Studio 2017\Projects\databejs\app\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.Properties.Resources.resources
+G:\Documents\Visual Studio 2017\Projects\databejs\app\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.csproj.GenerateResource.Cache
+G:\Documents\Visual Studio 2017\Projects\databejs\app\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.exe
+G:\Documents\Visual Studio 2017\Projects\databejs\app\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.pdb
+G:\Documents\Visual Studio 2017\Projects\databejs\app\WindowsFormsApplication2\bin\Debug\WindowsFormsApplication2.exe.config
+G:\Documents\Visual Studio 2017\Projects\databejs\app\WindowsFormsApplication2\bin\Debug\WindowsFormsApplication2.exe
+G:\Documents\Visual Studio 2017\Projects\databejs\app\WindowsFormsApplication2\bin\Debug\WindowsFormsApplication2.pdb
+G:\Documents\Visual Studio 2017\Projects\databejs\app\WindowsFormsApplication2\bin\Debug\MySql.Data.dll
+G:\Documents\Visual Studio 2017\Projects\databejs\app\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.MainWindow.resources

@@ -1,0 +1,334 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using System.Data.SqlClient;
+using System.Windows.Forms.DataVisualization.Charting;
+using System.Globalization;
+using System.IO;
+using System.Configuration;
+
+namespace WindowsFormsApplication2
+{
+    public partial class Form3 : Form
+    {
+        SqlConnection connection = new SqlConnection();
+        Loaddb load = new Loaddb();
+        public string cmd;
+        DateTime odMyDate;
+        DateTime doMyDate;
+
+        public Form3(string strTextBox, double pwr, double voc, double isc, double ff, double ee, double temp, double pwrDev, double vocDev, double iscDev, double ffDev, double eDev, double tempDev)
+        {
+
+            InitializeComponent();
+            establishSQLConnection();
+
+            pwrLabel.Text = pwr.ToString();
+            vocLabel.Text = voc.ToString();
+            iscLabel.Text = isc.ToString();
+            ffLabel.Text = ff.ToString();
+            eLabel.Text = ee.ToString();
+            tempLabel.Text = temp.ToString();
+            pwrDevLabel.Text = pwrDev.ToString();
+            vocDevLabel.Text = vocDev.ToString();
+            iscDevLabel.Text = iscDev.ToString();
+            ffDevLabel.Text = ffDev.ToString();
+            eDevLabel.Text = eDev.ToString();
+            tempDevLabel.Text = tempDev.ToString();
+
+            //DATE TIME PICKER
+            
+            odTimePicker.Format = DateTimePickerFormat.Time;
+            odTimePicker.ShowUpDown = true;
+
+            doTimePicker.Format = DateTimePickerFormat.Time;
+            doTimePicker.ShowUpDown = true;
+            
+            this.doDateTimePicker.Value = DateTime.Now;
+            this.odDateTimePicker.Value = DateTime.Now;
+
+            this.doTimePicker.Value = DateTime.Now;
+            this.odTimePicker.Value = DateTime.Now;
+
+            odMyDate = odDateTimePicker.Value.Date + odTimePicker.Value.TimeOfDay;
+            doMyDate = doDateTimePicker.Value.Date + doTimePicker.Value.TimeOfDay;
+
+            serialNumberLabel.Text = strTextBox;
+
+            cmd = "SELECT TESTER FROM FLASHCALIB_RESULTS WHERE MODULE_SN='";
+            cmd += serialNumberLabel.Text + "' " + ";";
+            
+            try
+            {
+                SqlCommand command = new SqlCommand(cmd, this.connection);
+                using (SqlDataReader reader = command.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        if (!testerComboBox.Items.Contains(reader[0]))
+                            testerComboBox.Items.Add(reader[0]);
+
+                    }
+                }
+            }
+            catch (SqlException sqlEx)
+            {
+                MessageBox.Show(sqlEx.ToString(), "Communicate", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Application.Exit();
+            }
+
+            try
+            {
+                testerComboBox.Text = testerComboBox.GetItemText(testerComboBox.Items[0]);
+                load.AddDataToGridView_FLASHCALIB_RESULT(load.LoadDataByTester(cmd, serialNumberLabel.Text, testerComboBox.Text, odMyDate.ToString(), doMyDate.ToString()), dataGridView, connection);
+
+            }
+            catch
+            {
+                this.Close();        
+            }
+            testerComboBox.MouseWheel += (o, e) => ((HandledMouseEventArgs)e).Handled = true;        
+        }
+
+        private void establishSQLConnection()
+        {
+
+            try
+            {
+                connection.ConnectionString =
+                "Data Source = PLKWIM0SQLV02B\\ENG;" +
+                "Initial Catalog = SunPowerTest;" +
+                "User id = te_sql_autouser;" +
+                "Password = JabilSQLTE01;";
+
+                connection.Open();
+
+            }
+            catch (SqlException sqlEx)
+            {
+                MessageBox.Show(sqlEx.ToString(), "Communicate", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Application.Exit();
+            }
+        }
+
+        private void MainWindow_FormClosed(object sender, FormClosedEventArgs e)
+        {
+
+            if (connection.State == ConnectionState.Open)
+            {
+                connection.Close();
+                connection.Dispose();
+            }
+            Application.Exit();
+        }
+
+        private void data_ValueChanged(object sender, EventArgs e)
+        {
+
+            odMyDate = odDateTimePicker.Value.Date + odTimePicker.Value.TimeOfDay;
+            doMyDate = doDateTimePicker.Value.Date + doTimePicker.Value.TimeOfDay;
+            load.AddDataToGridView_FLASHCALIB_RESULT(load.LoadDataByTester(cmd, serialNumberLabel.Text, testerComboBox.Text, odMyDate.ToString(), doMyDate.ToString()), dataGridView, connection);
+            iloscPomiarowLabel.Text = (dataGridView.RowCount).ToString();
+                        
+            // PWR
+
+            load.CreateChart(dataGridView, chartPwr, 4, Convert.ToDouble(pwrLabel.Text), Convert.ToDouble(pwrDevLabel.Text));
+
+            //VOC
+
+            load.CreateChart(dataGridView, chartVoc, 5, Convert.ToDouble(vocLabel.Text), Convert.ToDouble(vocDevLabel.Text));
+
+            //ISC
+
+            load.CreateChart(dataGridView, chartIsc, 6, Convert.ToDouble(iscLabel.Text), Convert.ToDouble(iscDevLabel.Text));
+
+            //FF
+
+            load.CreateChart(dataGridView, chartFf, 7, Convert.ToDouble(ffLabel.Text), Convert.ToDouble(ffDevLabel.Text));
+
+            //E
+
+            load.CreateChart(dataGridView, chartE, 8, Convert.ToDouble(eLabel.Text), Convert.ToDouble(eDevLabel.Text));
+
+            //TEMP
+
+            load.CreateChart(dataGridView, chartTemp, 10, Convert.ToDouble(tempLabel.Text), Convert.ToDouble(tempDevLabel.Text));
+        }
+
+        private void testerComboBox_DropDown(object sender, EventArgs e)
+        {
+            cmd = "SELECT TESTER FROM FLASHCALIB_RESULTS WHERE MODULE_SN='";
+            cmd += serialNumberLabel.Text + "' " + ";";
+
+            
+            try
+            {
+                SqlCommand command = new SqlCommand(cmd, this.connection);
+                using (SqlDataReader reader = command.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        if (!testerComboBox.Items.Contains(reader[0]))
+                            testerComboBox.Items.Add(reader[0]);
+
+                    }
+                }
+            }
+            catch (SqlException sqlEx)
+            {
+                MessageBox.Show(sqlEx.ToString(), "Communicate", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Application.Exit();
+            }
+
+        }
+
+        private void testerComboBox_TextChanged(object sender, EventArgs e)
+        {
+
+            load.AddDataToGridView_FLASHCALIB_RESULT(load.LoadDataByTester(cmd, serialNumberLabel.Text, testerComboBox.Text, odMyDate.ToString(), doMyDate.ToString()), dataGridView, connection);
+
+            iloscPomiarowLabel.Text = (dataGridView.RowCount).ToString();
+
+            // PWR
+
+            load.CreateChart(dataGridView, chartPwr, 4, Convert.ToDouble(pwrLabel.Text), Convert.ToDouble(pwrDevLabel.Text));
+
+            //VOC
+
+            load.CreateChart(dataGridView, chartVoc, 5, Convert.ToDouble(vocLabel.Text), Convert.ToDouble(vocDevLabel.Text));
+
+            //ISC
+
+            load.CreateChart(dataGridView, chartIsc, 6, Convert.ToDouble(iscLabel.Text), Convert.ToDouble(iscDevLabel.Text));
+
+            //FF
+
+            load.CreateChart(dataGridView, chartFf, 7, Convert.ToDouble(ffLabel.Text), Convert.ToDouble(ffDevLabel.Text));
+
+            //E
+
+            load.CreateChart(dataGridView, chartE, 8, Convert.ToDouble(eLabel.Text), Convert.ToDouble(eDevLabel.Text));
+
+            //TEMP
+
+            load.CreateChart(dataGridView, chartTemp, 10, Convert.ToDouble(tempLabel.Text), Convert.ToDouble(tempDevLabel.Text));
+        }
+
+
+        // PWR
+
+        private void chartPwr_DoubleClick(object sender, EventArgs e)
+        {
+
+            Charts chart = new Charts(iloscPomiarowLabel.Text, chartPwr.Series[0].Name, dataGridView, 4, Convert.ToDouble(pwrLabel.Text), Convert.ToDouble(pwrDevLabel.Text));
+
+            chart.Show();
+        }
+
+        // VOC
+
+        private void chartVoc_DoubleClick(object sender, EventArgs e)
+        {
+            Charts chart = new Charts(iloscPomiarowLabel.Text, chartVoc.Series[0].Name, dataGridView, 5, Convert.ToDouble(vocLabel.Text), Convert.ToDouble(vocDevLabel.Text));
+
+            chart.Show();
+        }
+
+        // ISC
+
+        private void chartIsc_DoubleClick(object sender, EventArgs e)
+        {
+            Charts chart = new Charts(iloscPomiarowLabel.Text, chartIsc.Series[0].Name, dataGridView, 6, Convert.ToDouble(iscLabel.Text), Convert.ToDouble(iscDevLabel.Text));
+
+            chart.Show();
+        }
+
+        // FF
+
+        private void chartff_DoubleClick(object sender, EventArgs e)
+        {
+            Charts chart = new Charts(iloscPomiarowLabel.Text, chartFf.Series[0].Name, dataGridView, 7, Convert.ToDouble(ffLabel.Text), Convert.ToDouble(ffDevLabel.Text));
+
+            chart.Show();
+        }
+
+        // E
+
+        private void chartE_DoubleClick(object sender, EventArgs e)
+        {
+            Charts chart = new Charts(iloscPomiarowLabel.Text, chartE.Series[0].Name, dataGridView, 8, Convert.ToDouble(eLabel.Text), Convert.ToDouble(eDevLabel.Text));
+
+            chart.Show();
+        }
+
+        //TEMP
+
+        private void chartTemp_DoubleClick(object sender, EventArgs e)
+        {
+            Charts chart = new Charts(iloscPomiarowLabel.Text, chartTemp.Series[0].Name, dataGridView, 10, Convert.ToDouble(tempLabel.Text), Convert.ToDouble(tempDevLabel.Text));
+
+            chart.Show();
+
+        }
+
+        protected override bool ProcessDialogKey(Keys keyData)
+        {
+            if (Form.ModifierKeys == Keys.None && keyData == Keys.Escape)
+            {
+                this.Close();
+                return true;
+            }
+            return base.ProcessDialogKey(keyData);
+        }
+
+        //EXCEL EXPORT
+
+        private void eksportujButton_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog sfd = new SaveFileDialog();
+            sfd.Filter = "Excel Documents (*.xls)|*.xls";
+            sfd.FileName = "export.xls";
+            if (sfd.ShowDialog() == DialogResult.OK)
+            {
+              ToCsV(dataGridView, sfd.FileName); 
+            }
+            
+        }
+
+        private void ToCsV(DataGridView dGV, string filename)
+        {
+            string stOutput = "";
+      
+            string sHeaders = "";
+
+            for (int j = 0; j < dGV.Columns.Count; j++)
+                sHeaders = sHeaders.ToString() + Convert.ToString(dGV.Columns[j].HeaderText) + "\t";
+            stOutput += sHeaders + "\r\n";
+            
+            for (int i = 0; i < dGV.RowCount - 1; i++)
+            {
+                string stLine = "";
+                for (int j = 0; j < dGV.Rows[i].Cells.Count; j++)
+                    stLine = stLine.ToString() + Convert.ToString(dGV.Rows[i].Cells[j].Value) + "\t";
+                stOutput += stLine + "\r\n";
+            }
+            Encoding utf16 = Encoding.GetEncoding(1254);
+            byte[] output = utf16.GetBytes(stOutput);
+            FileStream fs = new FileStream(filename, FileMode.Create);
+            BinaryWriter bw = new BinaryWriter(fs);
+            bw.Write(output, 0, output.Length); 
+            bw.Flush();
+            bw.Close();
+            fs.Close();
+        }
+
+        
+    }
+    
+}

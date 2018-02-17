@@ -1,0 +1,423 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using System.Data.SqlClient;
+
+namespace WindowsFormsApplication2
+{
+    public partial class Form1 : Form
+    {
+        SqlConnection connection = new SqlConnection();
+        Loaddb load = new Loaddb();
+        DateTime odMyDate;
+
+        string commandString = "SELECT * FROM FLASHCALIB_DATA WHERE INUSE='true'";
+
+        public Form1()
+        {
+            InitializeComponent();
+
+            establishSQLConnection();
+
+            inuseCombobox.MouseWheel += (o, e) => ((HandledMouseEventArgs)e).Handled = true;
+
+            inuseCombobox.Text = "True";
+
+            //DATE TIME PICKER
+
+            TimePicker.Format = DateTimePickerFormat.Time;
+            TimePicker.ShowUpDown = true;
+            
+            this.DateTimePicker.Value = DateTime.Now;
+            this.TimePicker.Value = DateTime.Now;
+
+            odMyDate = DateTimePicker.Value.Date + TimePicker.Value.TimeOfDay;
+            
+            load.AddDataToGridView_FLASHCALIB_DATA(commandString, dataGridView, connection);
+        }
+
+        private void establishSQLConnection()
+        {
+            try
+            {
+                connection.ConnectionString =
+                "Data Source = PLKWIM0SQLV02B\\ENG;" +
+                "Initial Catalog = SunPowerTest;" +
+                "User id = te_sql_autouser;" +
+                "Password = JabilSQLTE01;";
+
+                connection.Open();
+                
+            }
+            catch (SqlException sqlEx)
+            {
+                MessageBox.Show(sqlEx.ToString(), "Communicate", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Application.Exit();
+            }
+        }
+
+        private void MainWindow_FormClosed(object sender, FormClosedEventArgs e)
+        {
+
+            if (connection.State == ConnectionState.Open)
+            {
+                connection.Close();
+                connection.Dispose();
+            }
+            Application.Exit();
+        }
+        
+        private void inuseCombobox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (inuseCombobox.Text == "False")
+                load.AddDataToGridView_FLASHCALIB_DATA("SELECT * FROM FLASHCALIB_DATA WHERE INUSE='false'", dataGridView, connection);
+            else
+                load.AddDataToGridView_FLASHCALIB_DATA("SELECT * FROM FLASHCALIB_DATA WHERE INUSE='true'", dataGridView, connection);
+        }
+              
+        private void dataGridView_CellBeginEdit(object sender, DataGridViewCellCancelEventArgs e)
+        {
+            if (((DataGridView)sender).CurrentCell.ColumnIndex == 1)
+                e.Cancel = true;
+        }
+        
+
+        private void dataGridView_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            double pwrValue = Convert.ToDouble(dataGridView[3, dataGridView.CurrentCell.RowIndex].Value);
+
+            double pwrDevValue = Convert.ToDouble(dataGridView[4, dataGridView.CurrentCell.RowIndex].Value);
+
+            double vocValue = Convert.ToDouble(dataGridView[5, dataGridView.CurrentCell.RowIndex].Value);
+
+            double vocDevValue = Convert.ToDouble(dataGridView[6, dataGridView.CurrentCell.RowIndex].Value);
+
+            double iscValue = Convert.ToDouble(dataGridView[7, dataGridView.CurrentCell.RowIndex].Value);
+
+            double iscDevValue = Convert.ToDouble(dataGridView[8, dataGridView.CurrentCell.RowIndex].Value);
+
+            double ffValue = Convert.ToDouble(dataGridView[9, dataGridView.CurrentCell.RowIndex].Value);
+
+            double ffDevValue = Convert.ToDouble(dataGridView[10, dataGridView.CurrentCell.RowIndex].Value);
+
+            double eValue = Convert.ToDouble(dataGridView[11, dataGridView.CurrentCell.RowIndex].Value);
+
+            double eDevValue = Convert.ToDouble(dataGridView[12, dataGridView.CurrentCell.RowIndex].Value);
+
+            double tempValue = Convert.ToDouble(dataGridView[15, dataGridView.CurrentCell.RowIndex].Value);
+
+            double tempDevValue = Convert.ToDouble(dataGridView[16, dataGridView.CurrentCell.RowIndex].Value);
+
+
+            int lastColumnIndex = dataGridView.CurrentCell.ColumnIndex;
+            
+            dataGridView[1, dataGridView.CurrentCell.RowIndex].Selected = true;
+
+            int selectedCellCount = dataGridView.GetCellCount(DataGridViewElementStates.Selected);
+
+            if (selectedCellCount > 0)
+            {
+                StringBuilder sb = new StringBuilder();
+
+                for (int i = 0; i < selectedCellCount; i++)
+                {
+                    sb.Append(dataGridView.SelectedCells[i].Value.ToString());
+                    
+                    Form3 frm = new Form3(sb.ToString(), pwrValue, vocValue, iscValue, ffValue, eValue, tempValue, pwrDevValue, vocDevValue, iscDevValue, ffDevValue, eDevValue, tempDevValue);
+
+                    try
+                    {
+                        frm.Show();
+                    }
+                    catch
+                    {
+                        MessageBox.Show("Nie ma takiego modu³u", "B³¹d", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+
+                    sb.Clear();
+                }
+
+            }
+            dataGridView[lastColumnIndex, dataGridView.CurrentCell.RowIndex].Selected = true;
+        }
+
+        protected override bool ProcessDialogKey(Keys keyData)
+        {
+            if (Form.ModifierKeys == Keys.None && keyData == Keys.Escape)
+            {
+                this.Close();
+                return true;
+            }
+            return base.ProcessDialogKey(keyData);
+        }
+
+        private void dataGridView_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)13)
+            {
+                double pwrValue = Convert.ToDouble(dataGridView[3, dataGridView.CurrentCell.RowIndex].Value);
+
+                double pwrDevValue = Convert.ToDouble(dataGridView[4, dataGridView.CurrentCell.RowIndex].Value);
+
+                double vocValue = Convert.ToDouble(dataGridView[5, dataGridView.CurrentCell.RowIndex].Value);
+
+                double vocDevValue = Convert.ToDouble(dataGridView[6, dataGridView.CurrentCell.RowIndex].Value);
+
+                double iscValue = Convert.ToDouble(dataGridView[7, dataGridView.CurrentCell.RowIndex].Value);
+
+                double iscDevValue = Convert.ToDouble(dataGridView[8, dataGridView.CurrentCell.RowIndex].Value);
+
+                double ffValue = Convert.ToDouble(dataGridView[9, dataGridView.CurrentCell.RowIndex].Value);
+
+                double ffDevValue = Convert.ToDouble(dataGridView[10, dataGridView.CurrentCell.RowIndex].Value);
+
+                double eValue = Convert.ToDouble(dataGridView[11, dataGridView.CurrentCell.RowIndex].Value);
+
+                double eDevValue = Convert.ToDouble(dataGridView[12, dataGridView.CurrentCell.RowIndex].Value);
+
+                double tempValue = Convert.ToDouble(dataGridView[15, dataGridView.CurrentCell.RowIndex].Value);
+
+                double tempDevValue = Convert.ToDouble(dataGridView[16, dataGridView.CurrentCell.RowIndex].Value);
+
+                int lastColumnIndex = dataGridView.CurrentCell.ColumnIndex;
+
+                dataGridView[1, dataGridView.CurrentCell.RowIndex - 1].Selected = true;
+
+                int selectedCellCount = dataGridView.GetCellCount(DataGridViewElementStates.Selected);
+                if (selectedCellCount >= 0)
+                {
+                    StringBuilder sb = new StringBuilder();
+
+                    for (int i = 0; i < selectedCellCount; i++)
+                    {
+                        sb.Append(dataGridView.SelectedCells[i].Value.ToString());
+
+                        Form3 frm = new Form3(sb.ToString(), pwrValue, vocValue, iscValue, ffValue, eValue, tempValue, pwrDevValue, vocDevValue, iscDevValue, ffDevValue, eDevValue, tempDevValue);
+                        try
+                        {
+                            frm.Show();
+                        }
+                        catch
+                        {
+                            MessageBox.Show("Nie ma takiego modu³u", "B³¹d", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+
+                        sb.Clear();
+                    }
+
+                }
+                dataGridView[lastColumnIndex, dataGridView.CurrentCell.RowIndex].Selected = true;
+            }
+        }
+
+        private void editCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (editCheckBox.Checked == true)
+            {
+                dataGridView.ReadOnly = false;
+                idColumn.ReadOnly = true;
+                editCheckBox.Text = "W³¹czona";
+            }
+            else
+            {
+                dataGridView.ReadOnly = true;
+                editCheckBox.Text = "Wy³¹czona";
+            }
+        }
+
+        private void addCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (addCheckBox.Checked == true)
+            {
+                addCheckBox.Text = "W³¹czone";
+
+                module_snGroupBox.Enabled = true; testerGroupBox.Enabled = true; pwrGroupBox.Enabled = true;
+                pwrdevGroupBox.Enabled = true; vocGroupBox.Enabled = true; vocdevGroupBox.Enabled = true; iscGroupBox.Enabled = true;
+                iscdevGroupBox.Enabled = true; ffGroupBox.Enabled = true; ffdevGroupBox.Enabled = true; eGroupBox.Enabled = true;
+                edevGroupBox.Enabled = true; date_timeGroupBox.Enabled = true; descriptionGroupBox.Enabled = true; tempGroupBox.Enabled = true;
+                tempdevGroupBox.Enabled = true; inuseGroupBox.Enabled = true;
+                addRowButton.Enabled = true; deleteRowButton.Enabled = true; clearButton.Enabled = true;
+            }
+            else
+            {
+                addCheckBox.Text = "Wy³¹czone";
+
+                module_snGroupBox.Enabled = false; testerGroupBox.Enabled = false; pwrGroupBox.Enabled = false;
+                pwrdevGroupBox.Enabled = false; vocGroupBox.Enabled = false; vocdevGroupBox.Enabled = false; iscGroupBox.Enabled = false;
+                iscdevGroupBox.Enabled = false; ffGroupBox.Enabled = false; ffdevGroupBox.Enabled = false; eGroupBox.Enabled = false;
+                edevGroupBox.Enabled = false; date_timeGroupBox.Enabled = false; descriptionGroupBox.Enabled = false; tempGroupBox.Enabled = false;
+                tempdevGroupBox.Enabled = false; inuseGroupBox.Enabled = false;
+                addRowButton.Enabled = false; deleteRowButton.Enabled = false; clearButton.Enabled = false;
+            }
+        }
+
+        private void AddRowButton_Click(object sender, EventArgs e)
+        {
+            string commandString = "INSERT INTO FLASHCALIB_DATA (MODULE_SN, TESTER, PWR, PWRDEV, VOC, VOCDEV, ISC, ISCDEV, FF, FFDEV, E, EDEV, DATE_TIME, DESCRIPTION, TEMP, TEMPDEV, INUSE)";
+            commandString += "VALUES (@module_sn, @tester, @pwr, @pwrdev, @voc, @vocdev, @isc, @iscdev, @ff, @ffdev, @e, @edev, @date_time, @description, @temp, @tempdev, @inuse);";
+
+            odMyDate = DateTimePicker.Value.Date + TimePicker.Value.TimeOfDay;
+                        
+            SqlCommand comm = new SqlCommand(commandString,connection);
+            
+            comm.Parameters.AddWithValue("@module_sn", module_snTextbox.Text);
+            comm.Parameters.AddWithValue("@tester", testerTextbox.Text);
+            comm.Parameters.AddWithValue("@pwr", pwrTextbox.Text);
+            comm.Parameters.AddWithValue("@pwrdev", pwrdevTextbox.Text);
+            comm.Parameters.AddWithValue("@voc", vocTextbox.Text);
+            comm.Parameters.AddWithValue("@vocdev", vocdevTextbox.Text);
+            comm.Parameters.AddWithValue("@isc", iscTextbox.Text);
+            comm.Parameters.AddWithValue("@iscdev", iscdevTextbox.Text);
+            comm.Parameters.AddWithValue("@ff", ffTextbox.Text);
+            comm.Parameters.AddWithValue("@ffdev", ffdevTextbox.Text);
+            comm.Parameters.AddWithValue("@e", eTextbox.Text);
+            comm.Parameters.AddWithValue("@edev", edevTextbox.Text);
+            comm.Parameters.AddWithValue("@date_time", odMyDate.ToString());
+            comm.Parameters.AddWithValue("@description", descriptionTextbox.Text);
+            comm.Parameters.AddWithValue("@temp", tempTextbox.Text);
+            comm.Parameters.AddWithValue("@tempdev", tempdevTextbox.Text);
+            comm.Parameters.AddWithValue("@inuse", inuseTextbox.Text);
+
+            try
+            {
+                comm.ExecuteNonQuery();
+            }
+            catch
+            {
+                MessageBox.Show("Z³y format", "B³¹d", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            
+            load.AddDataToGridView_FLASHCALIB_DATA("SELECT * FROM FLASHCALIB_DATA WHERE INUSE = ('" + inuseCombobox.Text + "')", dataGridView, connection);
+        }
+
+        private void dataGridView_CellValueChanged(object sender, DataGridViewCellEventArgs e)
+        {
+            int selectedCellCount = dataGridView.GetCellCount(DataGridViewElementStates.Selected);
+            if (selectedCellCount >= 0)
+            {
+                StringBuilder sb = new StringBuilder();
+
+                for (int i = 0; i < selectedCellCount; i++)
+                {
+                    int colIndex = dataGridView.CurrentCell.ColumnIndex;
+                    int rowIndex = dataGridView.CurrentCell.RowIndex;
+
+                    string columnName = dataGridView.Columns[colIndex].Name;
+                    string idName = dataGridView.Rows[dataGridView.CurrentCell.RowIndex].Cells[0].Value.ToString();
+
+                    try
+                    {
+                        sb.Append(dataGridView.SelectedCells[i].Value.ToString());
+                    }
+                    catch
+                    {
+                        MessageBox.Show("Wype³nij komórkê");
+                    }
+
+                    string commandString = "UPDATE FLASHCALIB_DATA SET ";
+                    commandString += columnName;
+                    commandString += "= @pwr WHERE ID= ";
+                    commandString += idName;
+                    
+                    SqlCommand comm = new SqlCommand(commandString,connection);
+                    
+                    comm.Parameters.AddWithValue("@pwr", sb.ToString());
+
+                        try
+                        {
+                            comm.ExecuteNonQuery();
+                        }
+                        catch 
+                        {
+                            MessageBox.Show("Z³y format", "B³¹d", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    
+                    load.AddDataToGridView_FLASHCALIB_DATA("SELECT * FROM FLASHCALIB_DATA WHERE INUSE = ('" + inuseCombobox.Text + "')", dataGridView, connection);
+
+                    sb.Clear();
+                }
+
+            }
+        }
+
+        private void deleteRowButton_Click(object sender, EventArgs e)
+        {
+            int selectedCellCount = dataGridView.GetCellCount(DataGridViewElementStates.Selected);
+
+            DialogResult dialogResult = MessageBox.Show("SprawdŸ czy zaznaczy³eœ w³aœciwy wiersz. \nCzy na pewno chcesz go usun¹æ ?", "Uwaga", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (dialogResult == DialogResult.Yes)
+            {
+                if (selectedCellCount >= 0)
+                {
+                    StringBuilder sb = new StringBuilder();
+
+                    for (int i = 0; i < selectedCellCount; i++)
+                    {
+                        int rowIndex = dataGridView.CurrentCell.RowIndex;
+
+                        string idName = dataGridView.Rows[dataGridView.CurrentCell.RowIndex].Cells[0].Value.ToString();
+
+                        try
+                        {
+                            sb.Append(dataGridView.SelectedCells[i].Value.ToString());
+                        }
+                        catch
+                        {
+                           
+                        }
+
+                        string commandString = "DELETE FROM FLASHCALIB_DATA WHERE ";
+                        commandString += "ID= ";
+                        commandString += idName;
+
+                        SqlCommand comm = new SqlCommand(commandString,connection);
+        
+                        try
+                        {
+                            comm.ExecuteNonQuery();
+                        }
+                        catch (SqlException sqlEx)
+                        {
+                            MessageBox.Show(sqlEx.ToString(), "Communicate", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            Application.Exit();
+                        }
+
+                    }
+                    
+                    load.AddDataToGridView_FLASHCALIB_DATA("SELECT * FROM FLASHCALIB_DATA WHERE INUSE = ('" + inuseCombobox.Text + "')", dataGridView, connection);
+
+                    sb.Clear();
+                }
+            }   
+        }
+
+        private void clearButton_Click(object sender, EventArgs e)
+        {
+            idTextbox.Clear(); module_snTextbox.Clear(); testerTextbox.Clear(); pwrTextbox.Clear();
+            pwrdevTextbox.Clear(); vocTextbox.Clear(); vocdevTextbox.Clear(); iscTextbox.Clear();
+            iscdevTextbox.Clear(); ffTextbox.Clear(); ffdevTextbox.Clear(); eTextbox.Clear();
+            edevTextbox.Clear(); descriptionTextbox.Clear(); tempTextbox.Clear();
+            tempdevTextbox.Clear(); inuseTextbox.Clear();
+        }
+
+        private void searchModuleButton_Click(object sender, EventArgs e)
+        {
+            if (moduleSearchTextbox.Text == "")
+                load.AddDataToGridView_FLASHCALIB_DATA("SELECT * FROM FLASHCALIB_DATA WHERE INUSE='true'", dataGridView, connection);
+            else
+                load.AddDataToGridView_FLASHCALIB_DATA("SELECT * FROM FLASHCALIB_DATA WHERE MODULE_SN=('" + moduleSearchTextbox.Text + "') AND INUSE = ('" + inuseCombobox.Text + "')", dataGridView, connection);
+        }
+
+        private void moduleNameTextbox_TextChanged(object sender, EventArgs e)
+        {
+            if (moduleSearchTextbox.Text == "")
+                load.AddDataToGridView_FLASHCALIB_DATA("SELECT * FROM FLASHCALIB_DATA WHERE INUSE = ('" + inuseCombobox.Text + "')", dataGridView, connection);
+        }
+    }
+}
